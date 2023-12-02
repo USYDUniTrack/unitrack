@@ -1,0 +1,3 @@
+[submodule "scrape"]
+	path = scrape
+	url = https://github.com/USYDUniTrack/scrape.git
