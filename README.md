@@ -1,5 +1,9 @@
 # ReadMe before Starting UniTrack Project
 
+## Intalling
+
+1. First clone the repo using `git clone --recurse-submodules https://github.com/USYDUniTrack/unitrack.git`
+
 ## Contributing
 
 **Notes for the team on how to contribute/collaborate on the codebase: main/notes/README.md**
