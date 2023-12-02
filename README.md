@@ -23,8 +23,9 @@ Summarised from How to Write a Git Commit Message
 
 
 ## Members and Contact
-Antriksh Dhand
-Parth Barghava
-Devanshi Mirchanda
-Jenny Maria Tan
-Udit Samant
+- Parth Barghava
+- Devanshi Mirchanda
+- Jenny Maria Tan
+- Udit Samant
+
+- Antriksh Dhand
