@@ -1,6 +1,9 @@
-# ReadMe before Starting UniTrack Project
+# UniTrack Overview
 
-## Intalling
+## Table of Contents
+- [Getting Started](#Getting Started)
+
+## Getting Started
 
 1. First clone the repo using `git clone --recurse-submodules https://github.com/USYDUniTrack/unitrack.git`
 
