@@ -6,8 +6,6 @@
 
 ## Contributing
 
-**Notes for the team on how to contribute/collaborate on the codebase: main/notes/README.md**
-
 We welcome any collaboration and contributions from the public to this open source project. If you have a suggestion that would make this better, please fork the repo and create a pull request. These steps are listed below:
 
 1. Fork the Project
