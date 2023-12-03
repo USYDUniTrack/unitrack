@@ -59,7 +59,7 @@ Make a branch using `git checkout -b <branch_name>`.
 - Should be capitalized and written in imperative present tense
 - Do not end with period
 - Suggested format: *#<Ticket_ID> PR description*
-- 
+
 #### Description
 - Separated with a blank line from the subject
 - Explain what, why, etc.
