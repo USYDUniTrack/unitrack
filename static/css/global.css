@@ -26,12 +26,26 @@ body {
 .userDetails > p {
     margin: 0.5em;
 }
+
+/* default button beahviour*/
+button {
+    /* no ugly borders */
+    /* flat buttons */
+    border: transparent;
+    /* rounded borders by default; TODO change to more relative value */
+    border-radius: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
 .navbarButtons > .button {
     display: block;
     font-size: 17px;
     color: white;
     font-weight: 600;
-    background: none;
+    background-color: inherit;
     padding: 10px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -44,3 +58,4 @@ hr.solid {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
