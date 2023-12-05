@@ -17,7 +17,7 @@
 
 ## Overview
 
-This project was was initiated for Coding Fest 2023 by @usam @jenny @dev @gitparth12. The purpose of UniTrack is to present a university services platform with a better user experience, mainly targeting degree planning, unit selection, and time table selection.
+This project was initiated for Coding Fest 2023 by @GoogGameRuler @jennifermtain @devanshimirchandani @gitparth12. The purpose of UniTrack is to present a university services platform with a better user experience, mainly targeting degree planning, unit selection, and time table selection.
 
 The initial tech stack was NextJS with Firebase, however for a revamp of the project, we decided on Django and SQLite with HTML and CSS.
 
@@ -28,6 +28,10 @@ We welcome any collaboration and contributions from the public to this project, 
 *SSH authentication is recommended, visit [this link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) for more information.*
 1. Clone the repo using `git clone --recurse-submodules git@github.com:USYDUniTrack/unitrack.git`
 2. `cd` into the **unitrack/** directory and run `git config submodule.recurse true`. This will allow you to recursively pull changes to the scrape submodule every time you pull.
+3. Create python virtual env using `python -m venv venv`
+4. Activate environment using `source venv/bin/activate`
+5. Install dependencies using `python -m pip install -r requirements.txt`
+*You're all set! Keep in mind that you should activate the python env before every development session, and deactivate any other environments that might be active, eg. default `conda deactivate base`.*
 
 ## Contributing
 
