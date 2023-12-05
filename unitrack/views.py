@@ -12,5 +12,5 @@ def unit_search(request):
 
 
 def unit_page(request, unit_code):
-    contex = {unit_code: unit_code}
+    contex = {'unit_code': unit_code}
     return render(request, 'unit_page.html', contex)
