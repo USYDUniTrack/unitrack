@@ -17,7 +17,13 @@
 
 ## Overview
 
-This project was initiated for Coding Fest 2023 by @GoogGameRuler @jennifermtain @devanshimirchandani @gitparth12. The purpose of UniTrack is to present a university services platform with a better user experience, mainly targeting degree planning, unit selection, and time table selection.
+This project was initiated for Coding Fest 2023 by [Udit
+Samant](https://github.com/goodgameruler), [Jennifer
+Tan](https://github.com/jennifermtan), [Devanshi
+Mirchandani](https://github.com/devanshimirchandani), and [Parth
+Bhargava](https://github.com/gitparth12). The purpose of UniTrack is to present
+a university services platform with a better user experience, mainly targeting
+degree planning, unit selection, and time table selection.
 
 The initial tech stack was NextJS with Firebase, however for a revamp of the project, we decided on Django and SQLite with HTML and CSS.
 
@@ -91,8 +97,8 @@ Follow the steps below to suggest a patch or a feature for this project. For inf
 5. Open a Pull Request
 
 ## Developing Team
-- Parth Bhargava
-- Devanshi Mirchandani
-- Jennifer Tan
-- Udit Samant
+- [Parth Bhargava](https://github.com/gitparth12)
+- [Devanshi Mirchandani](https://github.com/devanshimirchandani)
+- [Jennifer Tan](https://github.com/jennifermtan)
+- [Udit Samant](https://github.com/goodgameruler)
 - Antriksh Dhand
