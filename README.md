@@ -37,6 +37,8 @@ We welcome any collaboration and contributions from the public to this project, 
 3. Create python virtual env using `python -m venv venv`
 4. Activate environment using `source venv/bin/activate`
 5. Install dependencies using `python -m pip install -r requirements.txt`  
+  
+
 *You're all set! Keep in mind that you should activate the python env before every development session, and deactivate any other environments that might be active, eg. default `conda deactivate base`.*
 
 ## Contributing
