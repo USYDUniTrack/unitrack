@@ -36,10 +36,6 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
-
 .navbarButtons > .button {
     display: block;
     font-size: 17px;
@@ -50,6 +46,21 @@ button:hover {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     min-width: 210px;
+}
+
+.navbarButtons > button:not(:active):hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+.navbarButtons > button:active {
+    /* box-shadow:0 0 10px #ff9d72; */
+    /* background-color: rgba(256, 256, 256, 30); */
+    background-color: black;
+
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    /* background-image: linear-gradient(rgb(0 0 0 * 40%) 0 0); */
+    /* transition: ease-in; */
+    /* transition-duration: 0.3s; */
 }
 
 hr.solid {
