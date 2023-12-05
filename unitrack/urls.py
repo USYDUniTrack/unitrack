@@ -20,6 +20,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="admin"),
+    path('unit_search/', views.unit_search, name="unit_search"),
+    path('unit_search/<str:unit_code>', views.unit_page, name="unit_page"),
     path('', views.main_page),
 ]
