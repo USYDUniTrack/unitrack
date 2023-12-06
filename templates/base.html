@@ -1,9 +1,17 @@
+{% load compress %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     {% block title %}{% endblock %}
     <script src="https://unpkg.com/htmx.org@1.1.0"></script>
     <script src="https://unpkg.com/htmx.org/dist/ext/response-targets.js"></script>
+
+    {% compress css %}
+        <link rel="stylesheet" type="text/x-scss" href="{% static "scss/global.scss" %}" />
+    {% endcompress %}
+
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-ext="response-targets">
     {% block main %}{% endblock %}
