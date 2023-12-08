@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<div>
-    {% include 'components/navbar.html' %}
-    <i class="material-icons md-18">cloud</i>
-    Hello World
+<div class="pageContainer" >
+    <div class="leftColumn">
+        {% include 'components/navbar.html' %}
+    </div>
+
+    <div class="unitSearchContainer">
+        {% include 'components/unit_search.html' %}
+    </div>
 
 </div>
 {% endblock %}
