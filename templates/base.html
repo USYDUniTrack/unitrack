@@ -18,7 +18,6 @@
     {% load static %}
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-ext="response-targets">
-    {% include 'components/header.html' %}
     <div class="pageContentContainer">
         {% block main %}{% endblock %}
     </div>
