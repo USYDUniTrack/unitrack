@@ -2,16 +2,15 @@
     display: block;
     top: 0;
     left: 0;
-    /* position: absolute; */
     background: #F0EEEE;
     height: 9%;
     min-height: 60px;
     max-height: 110px;
     width: 100%;
+    padding: 10px;
+
+    &img {
+        height: 100px;
+    }
 }
 
-.headerClass > img {
-    padding: 0px 10px;
-    height: 100%;
-    width: auto;
-}
