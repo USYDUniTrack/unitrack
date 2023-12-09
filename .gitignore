@@ -4,6 +4,7 @@ unitrack/__pycache__/
 **/venv/
 venv/
 *.py[cod]
+**/CACHE/
 
 # C extensions
 *.so
