@@ -5,11 +5,17 @@
     </div>
     <div class="navbarButtons">
         <button class="button" type="button">
-            <!-- <span class="material-symbols-outlined">calendar_month</span> -->
-            Timetable
+            <i class="material-icons">calendar_month</i>&nbsp;&nbsp;
+            <a href="{% url 'timetable' %}">My Timetable</a>
         </button>
-        <button class="button" type="button">Degree Plan</button>
+        <button class="button" type="button">
+            <i class="material-icons">edit_calendar</i>&nbsp;&nbsp;
+            <a href="{% url 'degree_plan' %}">Degree Plan</a>
+        </button>
         <hr class="solid">
-        <button class="button">Units</button>
+        <button class="button">
+            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+            Units
+        </button>
     </div>
 </div>
