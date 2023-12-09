@@ -123,7 +123,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = "collect/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+  os.path.join(BASE_DIR, 'static'),
 ]
 
 COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
