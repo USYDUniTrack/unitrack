@@ -11,7 +11,9 @@
     {% compress css %}
         <link rel="stylesheet" type="text/x-scss" href="{% static "scss/global.scss" %}" />
     {% endcompress %}
-
+  
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-ext="response-targets">
     {% block main %}{% endblock %}
