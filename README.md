@@ -39,7 +39,11 @@ We welcome any collaboration and contributions from the public to this project, 
 5. Install dependencies using `python -m pip install -r requirements.txt`  
   
 
-*You're all set! Keep in mind that you should activate the python env before every development session, and deactivate any other environments that might be active, eg. default `conda deactivate base`.*
+*You're all set! Keep in mind that you should activate the python env before
+every development session, and deactivate any other environments that might be
+active, eg. default `conda deactivate base`. If you're on a UNIX system, the
+included `start.sh` script can be run to start the server; however need to run
+`chmod +x start.sh` once to give execute permissions.*
 
 ## Contributing
 
