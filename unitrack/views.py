@@ -1,7 +1,4 @@
-from django.http import HttpResponse
-import datetime
 from django.shortcuts import render
-
 
 def main_page(request):
     contex = {}
@@ -16,4 +13,3 @@ def timetable(request):
 def degree_plan(request):
     contex = {}
     return render(request, 'degree_plan.html', contex)
-

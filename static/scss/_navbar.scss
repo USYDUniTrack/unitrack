@@ -57,3 +57,23 @@ button > a {
     /* transition: ease-in; */
     /* transition-duration: 0.3s; */
 }
+
+.unitSearchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.unitSearchContent {
+    width: 100%;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+}
