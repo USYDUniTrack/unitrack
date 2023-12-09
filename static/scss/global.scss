@@ -1,8 +1,17 @@
 // Variables
-
 $base-color: #c6538c;
 
 body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* default button beahviour*/
+button {
+    /* no ugly borders */
+    /* flat buttons */
+    border: transparent;
+    /* rounded borders by default; TODO change to more relative value */
+    border-radius: 5px;
 }
 
 @import "navbar";
