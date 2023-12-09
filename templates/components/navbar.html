@@ -4,18 +4,18 @@
         <p>jdoe1234@uni.sydney.edu.au</p>
     </div>
     <div class="navbarButtons">
-        <button class="button" type="button">
+        <button class="button" onclick="location.href=`{% url 'timetable' %}`">
             <i class="material-icons">calendar_month</i>&nbsp;&nbsp;
-            <a href="{% url 'timetable' %}">My Timetable</a>
+            My Timetable
         </button>
-        <button class="button" type="button">
+        <button class="button" onclick="location.href=`{% url 'degree_plan' %}`">
             <i class="material-icons">edit_calendar</i>&nbsp;&nbsp;
-            <a href="{% url 'degree_plan' %}">Degree Plan</a>
+            Degree Plan
         </button>
         <hr class="solid">
-        <button class="button">
+        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-            <a href="{% url 'unit_search' %}">Units</a>
+            Units
         </button>
     </div>
 </div>
