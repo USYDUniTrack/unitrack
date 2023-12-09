@@ -71,10 +71,23 @@ button > a {
     /* transition-duration: 0.3s; */
 }
 
-hr.solid {
-    border-top: 1px solid white;
-    width: 210px;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.unitSearchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.unitSearchContent {
+    width: 100%;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
 }
 
