@@ -1,5 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
+    margin-top: 9%;
 }
 
 .navbarContainer {
@@ -70,3 +71,22 @@ hr.solid {
     margin-bottom: 1em;
 }
 
+/* Header stuff */
+
+.headerClass {
+    display: block;
+    top: 0;
+    left: 0;
+    /* position: absolute; */
+    background: #F0EEEE;
+    height: 9%;
+    min-height: 60px;
+    max-height: 110px;
+    width: 100%;
+}
+
+.headerClass > img {
+    padding: 0px 10px;
+    height: 100%;
+    width: auto;
+}

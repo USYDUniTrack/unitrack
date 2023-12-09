@@ -1,7 +1,4 @@
-<div class="headerContainer">
-    <header>
-        <div class="logoContainer">
-            <img src="{{ MEDIA_URL }}usyd_logo.png">
-        </div>
-    </header>
-</div>
+<header class="headerClass">
+    {% load static %}
+    <img src="{% static 'images/usyd_logo.png' %}" alt="logo_img">
+</header>
