@@ -1,3 +1,7 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .navbarContainer {
     border-radius: 15px;
     background-color: rgba(221, 67, 43, 0.80);
@@ -21,6 +25,15 @@
 
 .userDetails > p {
     margin: 0.5em;
+}
+
+/* default button beahviour*/
+button {
+    /* no ugly borders */
+    /* flat buttons */
+    border: transparent;
+    /* rounded borders by default; TODO change to more relative value */
+    border-radius: 5px;
 }
 
 .navbarButtons > .button {
@@ -58,22 +71,10 @@ button > a {
     /* transition-duration: 0.3s; */
 }
 
-.unitSearchContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+hr.solid {
+    border-top: 1px solid white;
+    width: 210px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.unitSearchContent {
-    width: 100%;
-}
-
-.pageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
-}
