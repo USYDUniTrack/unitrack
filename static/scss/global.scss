@@ -22,8 +22,20 @@ hr.solid {
     margin-bottom: 1em;
 }
 
-.pageContentContainer {
-    padding: 8px;
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.pageContentsContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
 }
 
 @import "navbar";
