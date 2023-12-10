@@ -1,7 +1,6 @@
 <div class="navbarContainer">
     <div class="userDetails">
-        <p class="title">John Doe</p>
-        <p>jdoe1234@uni.sydney.edu.au</p>
+        <p class="title">LOGO</p>
     </div>
     <div class="navbarButtons">
         <button class="button" onclick="location.href=`{% url 'timetable' %}`">
@@ -17,11 +16,19 @@
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             Units
         </button>
+        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+            About us
+        </button>
+        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+            Friends
+        </button>
     </div>
     <div class="userButton"> 
         <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-            Units
+            Guest User
         </button>
     </div>
 </div>
