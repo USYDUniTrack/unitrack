@@ -13,3 +13,8 @@ def timetable(request):
 def degree_plan(request):
     contex = {}
     return render(request, 'degree_plan.html', contex)
+
+
+def sign_in(request):
+    contex = {}
+    return render(request, 'sign_in.html', contex)
