@@ -1,30 +1,42 @@
 .navbarContainer {
-    border-radius: 15px;
-    background-color: rgba(221, 67, 43, 0.80);
+    // border-radius: 15px;
+    background-color: rgba(221, 67, 43, 80);
     padding: 25px;
-    display: inline-grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
 }
 
 .navbarContainer > .userDetails {
     font-size: 12px;
     font-weight: 400;
     color: white;
-    width: 180px;
     padding-bottom: 10px;
 }
 
 .userDetails > .title {
-    font-size: 17px;
+    font-size: 30px;
     font-weight: 700;
+    margin: 0;
 }
 
 .userDetails > p {
     margin: 0.5em;
 }
 
+.navbarButtons {
+    height: 100%;
+}
+
 .navbarButtons > .button {
-    display: block;
+    display: flex;
     font-size: 17px;
     color: white;
     font-weight: 600;
@@ -33,14 +45,35 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     min-width: 210px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.navbarButtons > button:not(:active):hover {
-    // background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-    background-color: red;
+.navbarContainer > .userButton > .button {
+    display: flex;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(221, 67, 43, 100);;
+    padding: 10px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    min-width: 210px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.navbarButtons > button:active {
+button > a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbarButtons > button:not(:active):hover, .userButton > button:not(:active):hover {
+    /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
+    background-color: rgba(199, 71, 51, 0.8)
+}
+
+.navbarButtons > button:active , .userButton > button:active {
     /* box-shadow:0 0 10px #ff9d72; */
     /* background-color: rgba(256, 256, 256, 30); */
     background-color: black;
@@ -61,12 +94,4 @@
 
 .unitSearchContent {
     width: 100%;
-}
-
-.pageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
 }
