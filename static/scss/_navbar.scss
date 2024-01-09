@@ -1,6 +1,6 @@
 .navbarContainer {
     // border-radius: 15px;
-    background-color: rgba(221, 67, 43, 80);
+    background-color: #dd432be6;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -12,6 +12,9 @@
     top: 0px;
     left: 0px;
     box-sizing: border-box;
+    max-width: 350px;
+    min-width: 275px;
+    // overflow-y: scroll;
 }
 
 .navbarContainer > .userDetails {
@@ -33,6 +36,8 @@
 
 .navbarButtons {
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .navbarButtons > .button {
@@ -44,23 +49,102 @@
     padding: 10px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    min-width: 210px;
+    // min-width: 210px;
+    width: 100%;
     align-items: center;
     justify-content: flex-start;
+    box-sizing: border-box;
 }
 
-.navbarContainer > .userButton > .button {
-    display: flex;
-    font-size: 17px;
-    color: white;
-    font-weight: 600;
-    background-color: rgba(221, 67, 43, 100);;
-    padding: 10px;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    min-width: 210px;
-    align-items: center;
-    justify-content: flex-start;
+.navbarContainer {
+    & > .userButton {
+        box-sizing: border-box;
+        width: 100%;
+
+        & > .mainButton {
+            display: flex;
+            flex-direction: column;
+            // flex-direction: column-reverse;
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+            background-color: #df2c11;
+            // min-width: 210px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 20px;
+            max-height: 80px;
+            width: 100%;
+            box-sizing: border-box;
+            // row-gap: 20px;
+            transition: 0.5s ease;
+            overflow-anchor: none;
+            // -webkit-transition: height 0.5s;
+
+            & hr {
+                // visibility: hidden;
+                display: none;
+            }
+
+            & button {
+                display: flex;
+                font-size: 17px;
+                color: white;
+                font-weight: 600;
+                background-color: inherit;
+                padding: 10px;
+                margin-top: 0.1em;
+                margin-bottom: 0.1em;
+                width: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                // visibility: hidden;
+                display: none;
+
+                &:hover {
+                    /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
+                    background-color: #dd432be6;
+                    // background-color: #ffffff;
+                }
+            }
+
+            &:hover + & > button, &:hover + & > hr {
+                // visibility: visible;
+                display: flex;
+
+            }
+
+            & .buttonRow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            & .buttonColumn {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px;
+
+                    & > .material-icons {
+                        font-size: 40px;
+                    }
+
+                    & small {
+                        font-size: 11px;
+                        font-weight: 400;
+                    }
+            }
+
+            &:hover {
+                // height: auto;
+                max-height: 15em;
+            }
+        }
+    }
 }
 
 button > a {
@@ -68,12 +152,12 @@ button > a {
     color: white;
 }
 
-.navbarButtons > button:not(:active):hover, .userButton > button:not(:active):hover {
+.navbarButtons > button:not(:active):hover {
     /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
     background-color: rgba(199, 71, 51, 0.8)
 }
 
-.navbarButtons > button:active , .userButton > button:active {
+.navbarButtons > button:active {
     /* box-shadow:0 0 10px #ff9d72; */
     /* background-color: rgba(256, 256, 256, 30); */
     background-color: black;
@@ -90,8 +174,17 @@ button > a {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .unitSearchContent {
     width: 100%;
 }
+
+hr.solid {
+    border-top: 1px solid white;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+

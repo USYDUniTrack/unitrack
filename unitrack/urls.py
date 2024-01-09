@@ -25,5 +25,7 @@ urlpatterns = [
     path('units/', include("units.urls")),
     path('timetable', views.timetable, name="timetable"),
     path('degreeplan', views.degree_plan, name="degree_plan"),
+    path('aboutUs', views.about_us, name="about_us"),
+    path('friends', views.friends, name="friends"),
 ]
 

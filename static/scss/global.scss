@@ -15,18 +15,12 @@ button {
     border-radius: 5px;
 }
 
-hr.solid {
-    border-top: 1px solid white;
-    width: 210px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
 .pageContainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 .pageContentsContainer {
@@ -36,6 +30,7 @@ hr.solid {
     align-items: flex-start;
     justify-content: center;
     height: 100%;
+    box-sizing: border-box;
 }
 
 @import "navbar";

@@ -11,24 +11,57 @@
             <i class="material-icons">edit_calendar</i>&nbsp;&nbsp;
             Degree Plan
         </button>
-        <hr class="solid">
+        <hr class="solid" />
         <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             Units
         </button>
-        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+        <button class="button" onclick="location.href=`{% url 'about_us' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             About us
         </button>
-        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+        <button class="button" onclick="location.href=`{% url 'friends' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             Friends
         </button>
     </div>
     <div class="userButton"> 
-        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
-            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-            Guest User
-        </button>
+        <div class="mainButton" id="scrollBot">
+            <!--  content -->
+            <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                Settings                
+            </button>
+            <button class="button" onclick="location.href=`{% url 'about_us' %}`">
+                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                Sign In
+            </button>
+            <button class="button" onclick="location.href=`{% url 'friends' %}`">
+                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                Register
+            </button>
+            <hr class="solid" />
+            <!--          -->
+            <div class="buttonColumn" id="anchor">
+                <i class="material-icons">account_circle</i>&nbsp;&nbsp;
+                <div class="buttonRow">
+                    Guest User <br />
+                    <small>or Sign in here.</small>
+                </div> <br />
+            </div>
+            <script>
+                var objDiv = document.getElementById("scrollBot");
+                var innerHeight = objDiv.innerHeight;
+                objDiv.scrollTop = objDiv.scrollHeight;
+                objDiv.addEventListener(
+                    "transitionend",
+                    (event) => {
+                        objDiv.scrollTop = objDiv.scrollHeight;
+                    },
+                    false,
+                );
+            </script>
+        </div>
+
     </div>
 </div>
