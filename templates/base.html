@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-ext="response-targets">
-    {% block main %}{% endblock %}
+    <div class="pageContentContainer">
+        {% block main %}{% endblock %}
+    </div>
 </body>
 </html>

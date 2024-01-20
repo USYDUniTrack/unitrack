@@ -3,6 +3,7 @@ $base-color: #c6538c;
 
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
 /* default button beahviour*/
@@ -21,5 +22,8 @@ hr.solid {
     margin-bottom: 1em;
 }
 
+.pageContentContainer {
+    padding: 8px;
+}
 
 @import "navbar", "signin";
