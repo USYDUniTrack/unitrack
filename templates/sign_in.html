@@ -8,8 +8,8 @@
         <button id="signInButton" onclick="openForm()">Sign in</button>
 
         <!-- Sign in form -->
-        <div class="signInContainer">
-            <div class="backButton"><i class="material-icons">arrow_back_ios</i></div>
+        <div class="signInContainer" id="signInContainer">
+            <div class="backButton" id="closeButton"><i class="material-icons">arrow_back_ios</i></div>
             <div class="signInForm">
                 <h2>Welcome back!</h2>
                 <div class="formElement">
@@ -32,4 +32,17 @@
 
     </div>
 </div>
+
+<script>
+let signInForm = document.getElementById("signInContainer");
+let closeButton = document.getElementById("closeButton")
+
+function openForm() {
+    signInForm.classList.add("active")
+}
+
+closeButton.addEventListener("click", function() {
+    signInForm.classList.remove("active")
+})
+</script>
 {% endblock %}
