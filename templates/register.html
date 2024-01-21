@@ -4,14 +4,18 @@
 <div class="pageContainer">
     <div>
         {% include 'components/navbar.html' %}
-        <!-- dummy button to open up the sign in pop up -->
-        <button id="signInButton" onclick="openForm()">Sign in</button>
+        <!-- Dummy button to open up the registration pop up -->
+        <button id="registerButton" onclick="openForm()">Register</button>
 
-        <!-- Sign in form -->
-        <div class="signInContainer" id="signInContainer">
+        <!-- Registration form -->
+        <div class="registerContainer" id="registerContainer">
             <div class="backButton" id="closeButton"><i class="material-icons">arrow_back_ios</i></div>
-            <div class="signInForm">
-                <h2>Welcome back!</h2>
+            <div class="registrationForm">
+                <h2>Create an account</h2>
+                <div class="formElement">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Your name" id="name" required>
+                </div>
                 <div class="formElement">
                     <label for="username">Username (Unikey)</label>
                     <input type="text" placeholder="Your unikey" id="username" required>
@@ -21,11 +25,11 @@
                     <input type="text" placeholder="Your password" id="password" required>
                 </div>
                 <div class="formElement">
-                    <button type="submit" class="btn">SIGN IN</button>
+                    <button type="submit" class="btn">REGISTER</button>
                 </div>
                 <p>
-                    <a href="#">Forgot password?</a>
-                    <a href="{% url 'register' %}" class="register">Register Now</a>
+                    Already have an account?&nbsp
+                    <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
                 </p>
             </div>
         </div>
@@ -34,15 +38,15 @@
 </div>
 
 <script>
-let signInForm = document.getElementById("signInContainer");
+let registrationForm = document.getElementById("registerContainer");
 let closeButton = document.getElementById("closeButton")
 
 function openForm() {
-    signInForm.classList.add("active")
+    registrationForm.classList.add("active")
 }
 
 closeButton.addEventListener("click", function() {
-    signInForm.classList.remove("active")
+    registrationForm.classList.remove("active")
 })
 </script>
 {% endblock %}
