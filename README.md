@@ -29,7 +29,7 @@ The initial tech stack was NextJS with Firebase, however for a revamp of the pro
 
 We welcome any collaboration and contributions from the public to this project, please refer to the [open source contribution](#open-source) section.
 
-## Getting Started
+## Getting Started / Installation
 
 *SSH authentication is recommended, visit [this link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) for more information.*
 1. Clone the repo using `git clone --recurse-submodules git@github.com:USYDUniTrack/unitrack.git`
