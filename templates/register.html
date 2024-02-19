@@ -39,14 +39,27 @@
 
 <script>
 let registrationForm = document.getElementById("registerContainer");
-let closeButton = document.getElementById("closeButton")
+let closeButton = document.getElementById("closeButton");
+let openButton = document.getElementById("registerButton");
 
 function openForm() {
-    registrationForm.classList.add("active")
+    registrationForm.classList.add("active");
+    // Event listener for clicking outside the form
+    document.body.addEventListener("click", handleClickOutside);
 }
 
-closeButton.addEventListener("click", function() {
-    registrationForm.classList.remove("active")
+function handleClickOutside(event) {
+  if (!registrationForm.contains(event.target) && event.target !== openButton) {
+    // Click outside of registration form and open button
+    registrationForm.classList.remove("active");
+    // Remove event listener after closing the form
+    document.body.removeEventListener("click", handleClickOutside);
+  }
+}
+
+closeButton.addEventListener("click", function(event) {
+    registrationForm.classList.remove("active");
+    document.body.removeEventListener("click", handleClickOutside);
 })
 </script>
 {% endblock %}
