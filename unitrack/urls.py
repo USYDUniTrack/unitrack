@@ -23,4 +23,9 @@ urlpatterns = [
     path("admin/", admin.site.urls, name="admin"),
     path("", views.main_page),
     path("units/", include("units.urls")),
+    path('timetable', views.timetable, name="timetable"),
+    path('degreeplan', views.degree_plan, name="degree_plan"),
+    path('signin', views.sign_in, name="sign_in"),
+    path('register', views.register, name="register"),
 ]
+

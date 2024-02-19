@@ -2,7 +2,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     {% block title %}{% endblock %}
     <script src="https://unpkg.com/htmx.org@1.1.0"></script>
@@ -14,7 +14,6 @@
   
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    {% load static %}
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-ext="response-targets">
     <div class="pageContentContainer">

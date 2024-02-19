@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="pageContainer">
+    <div>
+        {% include 'components/navbar.html' %}
+        <!-- Dummy button to open up the registration pop up -->
+        <button id="registerButton" onclick="openForm()">Register</button>
+
+        <!-- Registration form -->
+        <div class="registerContainer" id="registerContainer">
+            <div class="backButton" id="closeButton"><i class="material-icons">arrow_back_ios</i></div>
+            <div class="registrationForm">
+                <h2>Create an account</h2>
+                <div class="formElement">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Your name" id="name" required>
+                </div>
+                <div class="formElement">
+                    <label for="username">Username (Unikey)</label>
+                    <input type="text" placeholder="Your unikey" id="username" required>
+                </div>
+                <div class="formElement">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Your password" id="password" required>
+                </div>
+                <div class="formElement">
+                    <button type="submit" class="btn">REGISTER</button>
+                </div>
+                <p>
+                    Already have an account?&nbsp
+                    <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+let registrationForm = document.getElementById("registerContainer");
+let closeButton = document.getElementById("closeButton");
+let openButton = document.getElementById("registerButton");
+
+function openForm() {
+    registrationForm.classList.add("active");
+    // Event listener for clicking outside the form
+    document.body.addEventListener("click", handleClickOutside);
+}
+
+function handleClickOutside(event) {
+  if (!registrationForm.contains(event.target) && event.target !== openButton) {
+    // Click outside of registration form and open button
+    registrationForm.classList.remove("active");
+    // Remove event listener after closing the form
+    document.body.removeEventListener("click", handleClickOutside);
+  }
+}
+
+closeButton.addEventListener("click", function(event) {
+    registrationForm.classList.remove("active");
+    document.body.removeEventListener("click", handleClickOutside);
+})
+</script>
+{% endblock %}
