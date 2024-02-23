@@ -5,11 +5,13 @@
     <div>
         {% include 'components/navbar.html' %}
         <!-- Dummy button to open up the registration pop up -->
-        <button id="registerButton" onclick="openForm()">Register</button>
+        <button id="registerButton" onclick="openRegistrationForm()">Register</button>
 
         <!-- Registration form -->
-        <div class="registerContainer" id="registerContainer">
-            <div class="backButton" id="closeButton"><i class="material-icons">arrow_back_ios</i></div>
+        <form class="registerContainer" id="registerContainer" onsubmit="openDetailsForm()">
+            <div class="backButton" id="closeButton" onclick="closeRegistrationForm()">
+                <i class="material-icons">arrow_back_ios</i>
+            </div>
             <div class="registrationForm">
                 <h2>Create an account</h2>
                 <div class="formElement">
@@ -28,38 +30,92 @@
                     <button type="submit" class="btn">REGISTER</button>
                 </div>
                 <p>
+                    Already have an account?&nbsp;
+                    <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
+                </p>
+            </div>
+        </form>
+
+        <form class="detailsContainer" id="detailsContainer">
+            <div class="backButton" id="closeButton" onclick="closeDetailsForm()">
+                <i class="material-icons">arrow_back_ios</i>
+            </div>
+            <div class="detailsForm">
+                <h2>Let's Get Started!</h2>
+                <div class="formElement">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Your name" id="name" required>
+                </div>
+                <div class="formElement">
+                    <label for="username">Username (Unikey)</label>
+                    <input type="text" placeholder="Your unikey" id="username" required>
+                </div>
+                <div class="formElement">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Your password" id="password" required>
+                </div>
+                <div class="formElement">
+                    <button type="submit" class="btn">FINISH</button>
+                </div>
+                <p>
                     Already have an account?&nbsp
                     <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
                 </p>
             </div>
-        </div>
+        </form>
 
     </div>
 </div>
 
 <script>
 let registrationForm = document.getElementById("registerContainer");
+let detailsForm = document.getElementById("detailsContainer")
 let closeButton = document.getElementById("closeButton");
 let openButton = document.getElementById("registerButton");
 
-function openForm() {
+function openRegistrationForm() {
     registrationForm.classList.add("active");
     // Event listener for clicking outside the form
-    document.body.addEventListener("click", handleClickOutside);
+    document.body.addEventListener("click", handleClickOutsideRegistration);
 }
 
-function handleClickOutside(event) {
-  if (!registrationForm.contains(event.target) && event.target !== openButton) {
-    // Click outside of registration form and open button
-    registrationForm.classList.remove("active");
-    // Remove event listener after closing the form
-    document.body.removeEventListener("click", handleClickOutside);
-  }
+function openDetailsForm() {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent event propagation
+    detailsForm.classList.add("active");
+    // Event listener for clicking outside the form
+    document.body.addEventListener("click", handleClickOutsideDetails);
 }
 
-closeButton.addEventListener("click", function(event) {
+function closeDetailsForm() {
+    event.stopPropagation(); // Prevent event propagation
+    detailsForm.classList.remove("active");
+}
+
+function closeRegistrationForm() {
     registrationForm.classList.remove("active");
-    document.body.removeEventListener("click", handleClickOutside);
-})
+    registrationForm.reset();
+    document.body.removeEventListener("click", handleClickOutsideRegistration);
+}
+
+function handleClickOutsideRegistration(event) {
+    if (!registrationForm.contains(event.target) && event.target !== openButton) {
+        // Click outside of registration form and open button
+        registrationForm.reset();
+        registrationForm.classList.remove("active");
+        // Remove event listener after closing the form
+        document.body.removeEventListener("click", handleClickOutsideRegistration);
+    }
+}
+
+function handleClickOutsideDetails(event) {
+    if (!detailsForm.contains(event.target) && event.target !== openButton) {
+        // Click outside of details form and open button
+        detailsForm.reset();
+        detailsForm.classList.remove("active");
+        // Remove event listener after closing the form
+        document.body.removeEventListener("click", handleClickOutsideDetails);
+    }
+}
 </script>
 {% endblock %}

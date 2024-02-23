@@ -23,18 +23,44 @@
                 transform 20ms ease-in-out 0ms;
 }
 
-.registerContainer > .backButton {
+.detailsContainer {
+    background-color: white;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 100000px rgba(0, 0, 0, 0.1); // Shadow the whole page
+    padding: 60px 60px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.detailsContainer.active {
+    top: 50%; // Position in the center
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); // Ensure it retains the same size
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.backButton {
     position: absolute;
     top: 20px;
     left: 20px;
     cursor: pointer;
 }
 
-.registerContainer h2 {
+h2 {
     text-align: center;
     font-size: 30px;
     margin: 0px 0px 30px;
 }
+
 
 .formElement {
     margin: 30px 0px;
