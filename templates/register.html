@@ -43,24 +43,47 @@
             <div class="detailsForm">
                 <h2>Let's Get Started!</h2>
                 <div class="formElement">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Your name" id="name" required>
+                    <label for="degree">Degree</label>
+                    <select required>
+                        <option value="" disabled selected>Select degree</option>
+                        <option value="1">Bachelor of Science</option>
+                        <option value="2">Bachelor of Advanced Computing</option>
+                        <option value="3">Bachelor of Interaction Design/Bachelor of Advanced Studies</option>
+                    </select>
                 </div>
                 <div class="formElement">
-                    <label for="username">Username (Unikey)</label>
-                    <input type="text" placeholder="Your unikey" id="username" required>
+                    <label for="firstMajor">Major</label>
+                    <select required>
+                        <option value="" disabled selected>Select major</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Data Science</option>
+                        <option value="3">Software Development</option>
+                    </select>
+                </div>
+                <!-- Optional inputs have an "n/a" option -->
+                <div class="formElement">
+                    <label for="secondMajor">Second major (if applicable)</label>
+                    <select required>
+                        <option value="" disabled selected>Select major</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Data Science</option>
+                        <option value="3">Software Development</option>
+                        <option value="4">n/a</option>
+                    </select>
                 </div>
                 <div class="formElement">
-                    <label for="password">Password</label>
-                    <input type="text" placeholder="Your password" id="password" required>
+                    <label for="minor">Minor (if applicable)</label>
+                    <select required>
+                        <option value="" disabled selected>Select minor</option>
+                        <option value="1">Mathematics</option>
+                        <option value="2">Computer Science</option>
+                        <option value="3">Design</option>
+                        <option value="4">n/a</option>
+                    </select>
                 </div>
                 <div class="formElement">
                     <button type="submit" class="btn">FINISH</button>
                 </div>
-                <p>
-                    Already have an account?&nbsp
-                    <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
-                </p>
             </div>
         </form>
 
@@ -82,6 +105,7 @@ function openRegistrationForm() {
 function openDetailsForm() {
     event.preventDefault();
     event.stopPropagation(); // Prevent event propagation
+    registrationForm.classList.remove("active");
     detailsForm.classList.add("active");
     // Event listener for clicking outside the form
     document.body.addEventListener("click", handleClickOutsideDetails);
@@ -90,6 +114,7 @@ function openDetailsForm() {
 function closeDetailsForm() {
     event.stopPropagation(); // Prevent event propagation
     detailsForm.classList.remove("active");
+    registrationForm.classList.add("active");
 }
 
 function closeRegistrationForm() {
