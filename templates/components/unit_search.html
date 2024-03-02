@@ -3,33 +3,101 @@
     <p> Unit outlines help you plan your unit choices, organise your studies and assessments, and provide evidence of the topics you have studied. Unit outlines will be available 2 weeks before the first day of teaching. </p>
 
     <form action="" class="search_filter">
-        <input type='text' placeholder="Search for a unit" name="search" id="unit_search">
-        <button type="submit">Search</button>
+        <div class="unit_search">
+            <span class="material-icons icon"> search </span>
+            <label class="input"><p>Search Unit Code </p> <input required type='text' placeholder="" name="search" id="unit_search" /><label>
+        </div>
     </form>
 
-    <h3>What is a unit outline?</h3>
-    <p>Unit outlines are a key source of information to help you understand what you will study, how you will learn and the way in which you’ll be assessed in a particular unit of study.
-    The information in the outline can be used to help you plan your unit choices, organise your studies, apply for special consideration, set up academic plans and provide evidence of the topics you have studied.
+    <div class="filterAccordian">
+        <div class="filter">
+            <p class="filterHeader"> Level </p>
 
-    In each outline you can find the following information:
+            <fieldset class="row">
+                <div class="check">
+                    <input type="checkbox" id="1000">
+                    <label for="1000">1000</label>
+                </div>
 
-    Assessments
-    Including the topic, type, title, weighting and due date(s).
-    Weekly schedule
-    A weekly breakdown of learning activities and topics.
-    Enrolment rules
-    Such as pre-requisites that must be met before you can enrol.
-    Teaching staff
-    Contact information for your unit coordinator, lecturers, tutors and faculty contact(s).
-    Learning outcomes
-    What you will be able to do and understand at the completion of the unit. Learning outcomes are linked to graduate qualities.
-    Unit information
-    Including prescribed readings and additional costs alongside academic integrity, special consideration and work health and safety information.
+                <div class="check">
+                    <input type="checkbox" id="2000">
+                    <label for="2000">2000</label>
+                </div>
 
-    You can find further information about available units and courses at Sydney University through Sydney Courses or view our Online Handbooks.</p>
+                <div class="check">
+                    <input type="checkbox" id="3000">
+                    <label for="3000">3000</label>
+                </div>
 
-    <h3>Related Links</h3>
+                <div class="check">
+                    <input type="checkbox" id="4000">
+                    <label for="4000">4000</label>
+                </div>
 
+                <div class="check">
+                    <input type="checkbox" id="4000+">
+                    <label for="4000+">4000+</label>
+                </div>
+            </fieldset>
 
+        </div>
+
+        <div class="filter">
+            <p class="filterHeader"> Offered In </p>
+
+            <fieldset class="row">
+                <div class="check">
+                    <input type="checkbox" id="sem1">
+                    <label for="sem1">Semester 1</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="sem2">
+                    <label for="sem2">Semester 2</label>
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="filter">
+            <p class="filterHeader"> Credit Points </p>
+
+            <fieldset class="row">
+                <div class="check">
+                    <input type="checkbox" id="twoCP">
+                    <label for="twoCP">2 CP</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="threeCP">
+                    <label for="threeCP">3 CP</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="sixCP">
+                    <label for="sixCP">6 CP</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="twelveCP">
+                    <label for="twelveCP">12 CP</label>
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="filter">
+            <p class="filterHeader"> Exams </p>
+
+            <fieldset class="row">
+                <div class="check">
+                    <input type="checkbox" id="noExams">
+                    <label for="noExams">No Exams</label>
+                </div>
+            </fieldset>
+
+        </div>
+
+    </div>
 
 </div>
