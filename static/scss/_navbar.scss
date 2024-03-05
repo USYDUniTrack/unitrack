@@ -60,6 +60,7 @@
     & > .userButton {
         box-sizing: border-box;
         width: 100%;
+        position: relative;
 
         & > .mainButton {
             display: flex;
@@ -76,16 +77,23 @@
             padding: 20px;
             border-radius: 20px;
             max-height: 80px;
+            min-height: 40px;
             width: 100%;
             box-sizing: border-box;
             // row-gap: 20px;
-            transition: 0.5s ease;
-            overflow-anchor: none;
+            transition: 2s ease;
             // -webkit-transition: height 0.5s;
 
             & hr {
-                // visibility: hidden;
-                display: none;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            & .hiddenButtons {
+                overflow: hidden;
+                max-height: 0px;
+                width: 100%;
+                transition: 2s ease;
             }
 
             & button {
@@ -102,20 +110,18 @@
                 justify-content: flex-start;
                 box-sizing: border-box;
                 // visibility: hidden;
-                display: none;
+                // display: none;
 
                 &:hover {
                     /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
-                    background-color: #dd432be6;
-                    // background-color: #ffffff;
+                    // background-color: #dd432be6;
+                    background-color: rgba(222, 76, 53, 0.97);
                 }
             }
 
-            &:hover + & > button, &:hover + & > hr {
-                // visibility: visible;
-                display: flex;
-
-            }
+            // &:hover + & > button, &:hover + & > hr {
+            //     display: flex;
+            // }
 
             & .buttonRow {
                 display: flex;
@@ -124,10 +130,11 @@
             }
 
             & .buttonColumn {
+                    position: relative;
+                    bottom: 0px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    padding: 10px;
 
                     & > .material-icons {
                         font-size: 40px;
@@ -140,8 +147,13 @@
             }
 
             &:hover {
-                // height: auto;
-                max-height: 15em;
+                max-height: 100vh;
+                height: auto;
+            }
+
+            &:hover .hiddenButtons {
+                max-height: 100vh;
+                height: auto;
             }
         }
     }
