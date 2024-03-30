@@ -3,37 +3,45 @@ body {
 }
 
 .navbarContainer {
-    border-radius: 15px;
-    background-color: rgba(221, 67, 43, 0.80);
+    // border-radius: 15px;
+    background-color: #dd432be6;
     padding: 25px;
-    display: inline-grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    max-width: 350px;
+    min-width: 275px;
+    // overflow-y: scroll;
 }
 
 .navbarContainer > .userDetails {
     font-size: 12px;
     font-weight: 400;
     color: white;
-    width: 180px;
     padding-bottom: 10px;
 }
 
 .userDetails > .title {
-    font-size: 17px;
+    font-size: 30px;
     font-weight: 700;
+    margin: 0;
 }
 
 .userDetails > p {
     margin: 0.5em;
 }
 
-/* default button beahviour*/
-button {
-    /* no ugly borders */
-    /* flat buttons */
-    border: transparent;
-    /* rounded borders by default; TODO change to more relative value */
-    border-radius: 5px;
+.navbarButtons {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .navbarButtons > .button {
@@ -45,9 +53,114 @@ button {
     padding: 10px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    min-width: 210px;
+    // min-width: 210px;
+    width: 100%;
     align-items: center;
     justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.navbarContainer {
+    & > .userButton {
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+
+        & > .mainButton {
+            display: flex;
+            flex-direction: column;
+            // flex-direction: column-reverse;
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+            background-color: #df2c11;
+            // min-width: 210px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 20px;
+            max-height: 80px;
+            min-height: 40px;
+            width: 100%;
+            box-sizing: border-box;
+            // row-gap: 20px;
+            transition: 2s ease;
+            // -webkit-transition: height 0.5s;
+
+            & hr {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            & .hiddenButtons {
+                overflow: hidden;
+                max-height: 0px;
+                width: 100%;
+                transition: 2s ease;
+            }
+
+            & button {
+                display: flex;
+                font-size: 17px;
+                color: white;
+                font-weight: 600;
+                background-color: inherit;
+                padding: 10px;
+                margin-top: 0.1em;
+                margin-bottom: 0.1em;
+                width: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                // visibility: hidden;
+                // display: none;
+
+                &:hover {
+                    /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
+                    // background-color: #dd432be6;
+                    background-color: rgba(222, 76, 53, 0.97);
+                }
+            }
+
+            // &:hover + & > button, &:hover + & > hr {
+            //     display: flex;
+            // }
+
+            & .buttonRow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            & .buttonColumn {
+                    position: relative;
+                    bottom: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    & > .material-icons {
+                        font-size: 40px;
+                    }
+
+                    & small {
+                        font-size: 11px;
+                        font-weight: 400;
+                    }
+            }
+
+            &:hover {
+                max-height: 100vh;
+                height: auto;
+            }
+
+            &:hover .hiddenButtons {
+                max-height: 100vh;
+                height: auto;
+            }
+        }
+    }
 }
 
 button > a {
@@ -57,7 +170,7 @@ button > a {
 
 .navbarButtons > button:not(:active):hover {
     /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
-    background-color: rgba(221, 67, 43, 0.80);
+    background-color: rgba(199, 71, 51, 0.8)
 }
 
 .navbarButtons > button:active {
@@ -77,17 +190,17 @@ button > a {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .unitSearchContent {
     width: 100%;
 }
 
-.pageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
+hr.solid {
+    border-top: 1px solid white;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 

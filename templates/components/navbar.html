@@ -1,7 +1,6 @@
 <div class="navbarContainer">
     <div class="userDetails">
-        <p class="title">John Doe</p>
-        <p>jdoe1234@uni.sydney.edu.au</p>
+        <p class="title">LOGO</p>
     </div>
     <div class="navbarButtons">
         <button class="button" onclick="location.href=`{% url 'timetable' %}`">
@@ -12,10 +11,61 @@
             <i class="material-icons">edit_calendar</i>&nbsp;&nbsp;
             Degree Plan
         </button>
-        <hr class="solid">
+        <hr class="solid" />
         <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             Units
         </button>
+        <button class="button" onclick="location.href=`{% url 'about_us' %}`">
+            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+            About us
+        </button>
+        <button class="button" onclick="location.href=`{% url 'friends' %}`">
+            <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+            Friends
+        </button>
+    </div>
+    <div class="userButton"> 
+        <div class="mainButton" id="scrollBot">
+            <!--  content -->
+            <div class="hiddenButtons">
+                <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Settings                
+                </button>
+                <button class="button" onclick="location.href=`{% url 'about_us' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Sign In
+                </button>
+                <button class="button" onclick="location.href=`{% url 'friends' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Register
+                </button>
+                <hr class="solid" />
+            </div>
+            <!--          -->
+            <div class="buttonColumn" id="anchor">
+                <i class="material-icons">account_circle</i>&nbsp;&nbsp;
+                <div class="buttonRow">
+                    Guest User <br />
+                    <small>or Sign in here.</small>
+                </div> <br />
+            </div>
+            <!-- <script> -->
+            <!--     var hiddenButtons = document.querySelectorAll('.userButton .button'); -->
+            <!--     var userButton = document.querySelector('.userButton'); -->
+            <!--     console.log("Working"); -->
+            <!--     userButton.addEventListener("mouseenter", (event) => { -->
+            <!--         hiddenButtons.forEach((elem) => { -->
+            <!--             elem.style.display = "flex"; -->
+            <!--         }); -->
+            <!--     }); -->
+            <!--     userButton.addEventListener("mouseleave", (event) => { -->
+            <!--         hiddenButtons.forEach((elem) => { -->
+            <!--             elem.style.display = "none"; -->
+            <!--         }); -->
+            <!--     }); -->
+            <!-- </script> -->
+        </div>
     </div>
 </div>

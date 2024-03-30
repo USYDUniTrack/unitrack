@@ -15,6 +15,15 @@ def degree_plan(request):
     return render(request, 'degree_plan.html', contex)
 
 
+def about_us(request):
+    contex = {}
+    return render(request, 'about_us.html', contex)
+
+
+def friends(request):
+    contex = {}
+    return render(request, 'friends.html', contex)
+
 def sign_in(request):
     contex = {}
     return render(request, 'sign_in.html', contex)
