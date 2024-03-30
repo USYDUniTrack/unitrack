@@ -118,12 +118,33 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
 
+
+STATIC_URL = '/static/'
+
+# Define STATICFILES_DIRS to include directories with static files across the project
 STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR, 'your_app1', 'static'), // example for apps
+    os.path.join(BASE_DIR, 'unitrack', 'static', 'global'),
 ]
+
+# Define STATIC_ROOT to specify the directory where Django collects static files during deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# if DEBUG:
+#     STATICFILES_DIRS = [
+#         os.path.join(BASE_DIR, 'static')
+#     ]
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
