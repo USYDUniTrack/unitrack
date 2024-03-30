@@ -1,3 +1,7 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .navbarContainer {
     border-radius: 15px;
     background-color: rgba(221, 67, 43, 0.80);
@@ -23,8 +27,17 @@
     margin: 0.5em;
 }
 
+/* default button beahviour*/
+button {
+    /* no ugly borders */
+    /* flat buttons */
+    border: transparent;
+    /* rounded borders by default; TODO change to more relative value */
+    border-radius: 5px;
+}
+
 .navbarButtons > .button {
-    display: block;
+    display: flex;
     font-size: 17px;
     color: white;
     font-weight: 600;
@@ -33,11 +46,18 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     min-width: 210px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+button > a {
+    text-decoration: none;
+    color: white;
 }
 
 .navbarButtons > button:not(:active):hover {
-    // background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-    background-color: red;
+    /* background-image: linear-gradient(rgb(0 0 0/40%) 0 0); */
+    background-color: rgba(221, 67, 43, 0.80);
 }
 
 .navbarButtons > button:active {
@@ -70,3 +90,4 @@
     justify-content: center;
     padding: 1rem;
 }
+
