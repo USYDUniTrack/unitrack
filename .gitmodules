@@ -1,3 +1,6 @@
 [submodule "scrape"]
 	path = scrape
 	url = https://github.com/USYDUniTrack/scrape.git
+[submodule "notes"]
+	path = notes
+	url = git@github.com:USYDUniTrack/notes.git
