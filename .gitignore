@@ -195,5 +195,4 @@ GitHub.sublime-settings
 .funky
 
 # DJANGO
-**/static/
 staticfiles/

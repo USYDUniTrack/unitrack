@@ -48,5 +48,9 @@ button {
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD:static/scss/global.scss
 @import "navbar";
 @import "unit_search";
+=======
+@import "navbar", "signin", "register";
+>>>>>>> major-Navbar:unitrack/static/global/scss/global.scss

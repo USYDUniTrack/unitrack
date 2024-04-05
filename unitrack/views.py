@@ -24,3 +24,10 @@ def friends(request):
     contex = {}
     return render(request, 'friends.html', contex)
 
+def sign_in(request):
+    contex = {}
+    return render(request, 'sign_in.html', contex)
+
+def register(request):
+    contex = {}
+    return render(request, 'register.html', contex)

@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="pageContainer">
+    <div>
+        {% include 'components/navbar.html' %}
+        <!-- Dummy button to open up the registration pop up -->
+        <button id="registerButton" onclick="openRegistrationForm()">Register</button>
+
+        <!-- Registration form -->
+        <form class="registerContainer" id="registerContainer" onsubmit="openDetailsForm()">
+            <div class="backButton" id="closeButton" onclick="closeRegistrationForm()">
+                <i class="material-icons">arrow_back_ios</i>
+            </div>
+            <div class="registrationForm">
+                <h2>Create an account</h2>
+                <div class="formElement">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Your name" id="name" required>
+                </div>
+                <div class="formElement">
+                    <label for="username">Username (Unikey)</label>
+                    <input type="text" placeholder="Your unikey" id="username" required>
+                </div>
+                <div class="formElement">
+                    <label for="password">Password</label>
+                    <input type="text" placeholder="Your password" id="password" required>
+                </div>
+                <div class="formElement">
+                    <button type="submit" class="btn">REGISTER</button>
+                </div>
+                <p>
+                    Already have an account?&nbsp;
+                    <a href="{% url 'sign_in' %}" class="signIn">Sign in</a>
+                </p>
+            </div>
+        </form>
+
+        <form class="detailsContainer" id="detailsContainer">
+            <div class="backButton" id="closeButton" onclick="closeDetailsForm()">
+                <i class="material-icons">arrow_back_ios</i>
+            </div>
+            <div class="detailsForm">
+                <h2>Let's Get Started!</h2>
+                <div class="formElement">
+                    <label for="degree">Degree</label>
+                    <select required>
+                        <option value="" disabled selected>Select degree</option>
+                        <option value="1">Bachelor of Science</option>
+                        <option value="2">Bachelor of Advanced Computing</option>
+                        <option value="3">Bachelor of Interaction Design/Bachelor of Advanced Studies</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <label for="firstMajor">Major</label>
+                    <select required>
+                        <option value="" disabled selected>Select major</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Data Science</option>
+                        <option value="3">Software Development</option>
+                    </select>
+                </div>
+                <!-- Optional inputs have an "n/a" option -->
+                <div class="formElement">
+                    <label for="secondMajor">Second major (if applicable)</label>
+                    <select required>
+                        <option value="" disabled selected>Select major</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Data Science</option>
+                        <option value="3">Software Development</option>
+                        <option value="4">n/a</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <label for="minor">Minor (if applicable)</label>
+                    <select required>
+                        <option value="" disabled selected>Select minor</option>
+                        <option value="1">Mathematics</option>
+                        <option value="2">Computer Science</option>
+                        <option value="3">Design</option>
+                        <option value="4">n/a</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <button type="submit" class="btn">FINISH</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+let registrationForm = document.getElementById("registerContainer");
+let detailsForm = document.getElementById("detailsContainer")
+let closeButton = document.getElementById("closeButton");
+let openButton = document.getElementById("registerButton");
+
+function openRegistrationForm() {
+    registrationForm.classList.add("active");
+    // Event listener for clicking outside the form
+    document.body.addEventListener("click", handleClickOutsideRegistration);
+}
+
+function openDetailsForm() {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent event propagation
+    registrationForm.classList.remove("active");
+    detailsForm.classList.add("active");
+    // Event listener for clicking outside the form
+    document.body.addEventListener("click", handleClickOutsideDetails);
+}
+
+function closeDetailsForm() {
+    event.stopPropagation(); // Prevent event propagation
+    detailsForm.classList.remove("active");
+    registrationForm.classList.add("active");
+}
+
+function closeRegistrationForm() {
+    registrationForm.classList.remove("active");
+    registrationForm.reset();
+    document.body.removeEventListener("click", handleClickOutsideRegistration);
+}
+
+function handleClickOutsideRegistration(event) {
+    if (!registrationForm.contains(event.target) && event.target !== openButton) {
+        // Click outside of registration form and open button
+        registrationForm.reset();
+        registrationForm.classList.remove("active");
+        // Remove event listener after closing the form
+        document.body.removeEventListener("click", handleClickOutsideRegistration);
+    }
+}
+
+function handleClickOutsideDetails(event) {
+    if (!detailsForm.contains(event.target) && event.target !== openButton) {
+        // Click outside of details form and open button
+        detailsForm.reset();
+        detailsForm.classList.remove("active");
+        // Remove event listener after closing the form
+        document.body.removeEventListener("click", handleClickOutsideDetails);
+    }
+}
+</script>
+{% endblock %}
