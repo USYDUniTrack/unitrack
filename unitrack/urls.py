@@ -27,5 +27,7 @@ urlpatterns = [
     path('degreeplan', views.degree_plan, name="degree_plan"),
     path('aboutUs', views.about_us, name="about_us"),
     path('friends', views.friends, name="friends"),
+    path('signin', views.sign_in, name="sign_in"),
+    path('register', views.register, name="register"),
 ]
 

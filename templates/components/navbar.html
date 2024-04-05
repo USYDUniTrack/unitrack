@@ -28,19 +28,21 @@
     <div class="userButton">
         <div class="mainButton" id="scrollBot">
             <!--  content -->
-            <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
-                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-                Settings
-            </button>
-            <button class="button" onclick="location.href=`{% url 'about_us' %}`">
-                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-                Sign In
-            </button>
-            <button class="button" onclick="location.href=`{% url 'friends' %}`">
-                <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
-                Register
-            </button>
-            <hr class="solid" />
+            <div class="hiddenButtons">
+                <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Settings
+                </button>
+                <button class="button" onclick="location.href=`{% url 'about_us' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Sign In
+                </button>
+                <button class="button" onclick="location.href=`{% url 'friends' %}`">
+                    <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
+                    Register
+                </button>
+                <hr class="solid" />
+            </div>
             <!--          -->
             <div class="buttonColumn" id="anchor">
                 <i class="material-icons">account_circle</i>&nbsp;&nbsp;
@@ -50,6 +52,5 @@
                 </div> <br />
             </div>
         </div>
-
     </div>
 </div>

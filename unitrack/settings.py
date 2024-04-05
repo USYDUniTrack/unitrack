@@ -26,7 +26,14 @@ SECRET_KEY = "django-insecure-ko0lwj@dr$evs6l2*jhr2!49=6yck*pan)*1g!jcs!sz)z7au_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# SECRET_KEY = os.environ.get("SECRET_KEY")
+
+# DEBUG = bool(os.environ.get("DEBUG", default=0))
+
+# 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
+# For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
+# ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -118,15 +125,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "/static/"
+STORAGES = {
+    "default": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        # "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage",
+        # "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
 
-STATIC_ROOT = "collect/"
+STATIC_URL = '/static/'
 
+# Define STATICFILES_DIRS to include directories with static files across the project
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    # os.path.join(BASE_DIR, 'your_app1', 'static'), // example for apps
+    os.path.join(BASE_DIR, 'unitrack', 'static', 'global'),
 ]
 
-COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
+# Define STATIC_ROOT to specify the directory where Django collects static files during deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
