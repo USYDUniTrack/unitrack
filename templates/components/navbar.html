@@ -1,6 +1,6 @@
 <div class="navbarContainer">
     <div class="userDetails">
-        <p class="title">LOGO</p>
+        <a href="/" class="title">LOGO</a>
     </div>
     <div class="navbarButtons">
         <!-- <button class="button" onclick="location.href=`{% url 'timetable' %}`"> -->
@@ -49,18 +49,6 @@
                     <small>or Sign in here.</small>
                 </div> <br />
             </div>
-            <script>
-                var objDiv = document.getElementById("scrollBot");
-                var innerHeight = objDiv.innerHeight;
-                objDiv.scrollTop = objDiv.scrollHeight;
-                objDiv.addEventListener(
-                    "transitionend",
-                    (event) => {
-                        objDiv.scrollTop = objDiv.scrollHeight;
-                    },
-                    false,
-                );
-            </script>
         </div>
 
     </div>
