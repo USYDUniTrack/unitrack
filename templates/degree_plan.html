@@ -3,8 +3,8 @@
 {% block main %}
     {% include 'components/navbar.html' %}
     <div class=pageContentsContainer>
-        <h2 class="pageHeader"> Get Started </h2>
-        In Progress at this moment. Thank you for your patience!
-
+        <div class="paddedContents">
+            {% include "components/degree_details_form.html" %}
+        </div>
     </div>
 {% endblock %}

@@ -19,14 +19,6 @@ a {
 }
 
 
-h2 {
-    padding: 0;
-    margin: 0;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 35px;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -51,18 +43,21 @@ button {
 .pageContentsContainer {
     grid-column: 2;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
 }
 
-.pageHeader {
-    font-size: 30;
+.pageHeader, .pageContentsContainer h2 {
+    font-size: 30px;
+    font-weight: 700;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.pageContentsContainer > div {
+    width: 800px;
+    grid-column: 2;
 }
 
 @import "navbar";
