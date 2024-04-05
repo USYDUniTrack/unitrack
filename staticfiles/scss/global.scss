@@ -1,0 +1,36 @@
+// Variables
+$base-color: #c6538c;
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* default button beahviour*/
+button {
+    /* no ugly borders */
+    /* flat buttons */
+    border: transparent;
+    /* rounded borders by default; TODO change to more relative value */
+    border-radius: 5px;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.pageContentsContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+@import "navbar", "signin", "register";
