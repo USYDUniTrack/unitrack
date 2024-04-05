@@ -4,6 +4,7 @@ body {
 
 .navbarContainer {
     // border-radius: 15px;
+    grid-column: 1;
     background-color: $usyd_orange;
     padding: 25px;
     display: flex;
@@ -204,4 +205,3 @@ hr.solid {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
