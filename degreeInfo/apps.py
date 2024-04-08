@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UnitsConfig(AppConfig):
+class DegreeinfoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'units'
+    name = 'degreeInfo'

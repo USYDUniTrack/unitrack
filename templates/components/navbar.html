@@ -1,18 +1,18 @@
 <div class="navbarContainer">
     <div class="userDetails">
-        <a href="/" class="title">LOGO</a>
+        <a hx-get="{% url 'hx_index' %}" hx-target=".pageContentsContainer" hx-swap="innerHTML" class="title">LOGO</a>
     </div>
     <div class="navbarButtons">
         <!-- <button class="button" onclick="location.href=`{% url 'timetable' %}`"> -->
         <!--     <i class="material-icons">calendar_month</i>&nbsp;&nbsp; -->
         <!--     My Timetable -->
         <!-- </button> -->
-        <button class="button" onclick="location.href=`{% url 'degree_plan' %}`">
+        <button class="button" hx-get="{% url 'degree_plan' %}" hx-target=".pageContentsContainer" hx-swap="innerHTML">
             <i class="material-icons">edit_calendar</i>&nbsp;&nbsp;
             Degree Plan
         </button>
         <!-- <hr class="solid" /> -->
-        <button class="button" onclick="location.href=`{% url 'unit_search' %}`">
+        <button class="button" hx-get="{% url 'unit_search' %}" hx-target=".pageContentsContainer" hx-swap="innerHTML">
             <i class="material-icons">auto_stories</i>&nbsp;&nbsp;
             Units
         </button>

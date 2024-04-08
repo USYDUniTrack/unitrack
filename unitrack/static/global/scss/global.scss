@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 
 * {
     margin: 0;
@@ -22,6 +26,12 @@ a {
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+}
+
+hr {
+    width: 100%;
+    color: black;
+    margin: 20px 0;
 }
 
 /* default button beahviour*/
@@ -55,10 +65,16 @@ button {
     text-align: center;
 }
 
+.pageContentsContainer h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .pageContentsContainer > div {
     width: 800px;
     grid-column: 2;
 }
 
-@import "navbar";
-@import "unit_search", "navbar", "signin", "register";
+@import "unit_search", "navbar", "signin", "register", "index";
