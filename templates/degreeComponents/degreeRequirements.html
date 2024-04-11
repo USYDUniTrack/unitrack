@@ -1,11 +1,10 @@
-<script>
-    import LinearProgress from "@mui/material";
-</script>
-
 <div class="degreeRequirements">
     <div class="degreeProgress">
-        <progress value="0" max="100"></progress>
+        <label id="degreePercentage" onclick="updateProgressBar(12, 100)">0% planned</label>
+        <label id="completedCredits">0/0cp</label>
+        <br/>
     </div>
+    <progress value="0" max="100"></progress>
 
     <div class="creditRequirements">
         <div class="degreeRequirement">
@@ -32,6 +31,8 @@ function updateProgressBar(credits, totalCredits) {
     var credits = credits;
     var totalCredits = totalCredits;
     document.getElementsByTagName("PROGRESS")[0].setAttribute("value", credits / totalCredits * 100);
+    document.getElementById("degreePercentage").innerHTML = credits / totalCredits * 100 + "% planned";
+    document.getElementById("completedCredits").innerHTML = credits + "/" + totalCredits + "cp";
 }
 </script>
 

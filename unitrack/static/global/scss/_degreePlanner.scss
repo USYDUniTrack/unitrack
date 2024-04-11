@@ -14,6 +14,16 @@
     align-items: center;
 }
 
+.degreeProgress {
+    width: 255px;
+    display: table;
+}
+
+.degreeProgress label {
+    display: table-cell;
+    width: 100%; // Fill the whole width
+}
+
 // Progress bar styling
 progress[value] {
     --color: #DD432B; /* the progress color */
@@ -32,12 +42,14 @@ progress[value] {
 progress[value]::-webkit-progress-bar {
     border-radius: 10em;
     background: var(--background);
-  }
-  progress[value]::-webkit-progress-value {
-    border-radius: 10em;
-    background: var(--color);
-  }
-  progress[value]::-moz-progress-bar {
-    border-radius: 10em;
-    background: var(--color);
-  }
+}
+
+progress[value]::-webkit-progress-value {
+border-radius: 10em;
+background: var(--color);
+}
+
+progress[value]::-moz-progress-bar {
+border-radius: 10em;
+background: var(--color);
+}
