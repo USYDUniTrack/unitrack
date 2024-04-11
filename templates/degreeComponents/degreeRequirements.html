@@ -1,0 +1,37 @@
+<script>
+    import LinearProgress from "@mui/material";
+</script>
+
+<div class="degreeRequirements">
+    <div class="degreeProgress">
+        <progress value="0" max="100"></progress>
+    </div>
+
+    <div class="creditRequirements">
+        <div class="degreeRequirement">
+            <label>Degree core</label>
+            <label>0/96</label>
+        </div>
+        <div class="degreeRequirement">
+            <label>Major 1</label>
+            <label>0/48</label>
+        </div>
+        <div class="degreeRequirement">
+            <label>Major 2</label>
+            <label>0/48</label>
+        </div>
+        <div class="degreeRequirement">
+            <label>Degree requirement</label>
+            <label>0/0</label>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateProgressBar(credits, totalCredits) {
+    var credits = credits;
+    var totalCredits = totalCredits;
+    document.getElementsByTagName("PROGRESS")[0].setAttribute("value", credits / totalCredits * 100);
+}
+</script>
+

@@ -1,0 +1,43 @@
+.degreeRequirements > .creditRequirements {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.degreeRequirements > .creditRequirements label {
+    padding: 20px;
+}
+
+.creditRequirements > .degreeRequirement {
+    width: 255px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Progress bar styling
+progress[value] {
+    --color: #DD432B; /* the progress color */
+    --background: #E5E5E5; /* the background color */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 255px;
+    height: 9px;
+    margin-bottom: 5px;
+    border-radius: 5em;
+    background: var(--background);
+}
+
+progress[value]::-webkit-progress-bar {
+    border-radius: 10em;
+    background: var(--background);
+  }
+  progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: var(--color);
+  }
+  progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: var(--color);
+  }
