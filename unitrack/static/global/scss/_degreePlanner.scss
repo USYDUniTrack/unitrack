@@ -1,12 +1,49 @@
+.degreePlan {
+    display: grid;
+    align-content: space-evenly;
+    grid-template-columns: auto;
+    gap: 25px;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    background-color: #F0EEEE;
+    border-radius: 15px;
+}
+
+.degreePlan > .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.degreePlan > .heading p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.degreePlan > .heading i {
+    color: black;
+    font-size: 35px;
+
+    &:hover {
+        color: #DD432B;
+    }
+}
+
 .degreeRequirements {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 15px 20px;
+    float: right;
+    position: sticky;
+    top: 0;
+    height: 100%; 
+    padding: 15px 15px;
+    height: 100%;
 }
 
 .degreeRequirements > .creditRequirements {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .degreeRequirements > .creditRequirements p {
@@ -59,4 +96,63 @@ background: var(--color);
 progress[value]::-moz-progress-bar {
 border-radius: 10em;
 background: var(--color);
+}
+
+// Degree unit styling
+.degreeUnit {
+    display: flex;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    flex-direction: column;
+    width: 150px;
+    min-width: 130px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+}
+
+.degreeUnit i {
+    color: black;
+    opacity: 50%;
+    font-size: 35px;
+
+    &:hover {
+        color: #DD432B;
+        opacity: 100%;
+    }
+}
+
+.semesterRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.semesterPlan > .semesterRow i {
+    color: black;
+    font-size: 30px;
+    margin-left: 10px;
+
+    &:hover {
+        color: #DD432B;
+    }
+}
+
+.semesterPlan p {
+    display: inline; // Prevent new line
+}
+
+.semesterPlan #year {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.semesterPlan #semester {
+    font-size: 20px;
+    font-weight: 600;
 }
