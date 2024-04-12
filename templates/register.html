@@ -36,56 +36,7 @@
             </div>
         </form>
 
-        <form class="detailsContainer" id="detailsContainer">
-            <div class="backButton" id="closeButton" onclick="closeDetailsForm()">
-                <i class="material-icons">arrow_back_ios</i>
-            </div>
-            <div class="detailsForm">
-                <h2>Let's Get Started!</h2>
-                <div class="formElement">
-                    <label for="degree">Degree</label>
-                    <select required>
-                        <option value="" disabled selected>Select degree</option>
-                        <option value="1">Bachelor of Science</option>
-                        <option value="2">Bachelor of Advanced Computing</option>
-                        <option value="3">Bachelor of Interaction Design/Bachelor of Advanced Studies</option>
-                    </select>
-                </div>
-                <div class="formElement">
-                    <label for="firstMajor">Major</label>
-                    <select required>
-                        <option value="" disabled selected>Select major</option>
-                        <option value="1">Computer Science</option>
-                        <option value="2">Data Science</option>
-                        <option value="3">Software Development</option>
-                    </select>
-                </div>
-                <!-- Optional inputs have an "n/a" option -->
-                <div class="formElement">
-                    <label for="secondMajor">Second major (if applicable)</label>
-                    <select required>
-                        <option value="" disabled selected>Select major</option>
-                        <option value="1">Computer Science</option>
-                        <option value="2">Data Science</option>
-                        <option value="3">Software Development</option>
-                        <option value="4">n/a</option>
-                    </select>
-                </div>
-                <div class="formElement">
-                    <label for="minor">Minor (if applicable)</label>
-                    <select required>
-                        <option value="" disabled selected>Select minor</option>
-                        <option value="1">Mathematics</option>
-                        <option value="2">Computer Science</option>
-                        <option value="3">Design</option>
-                        <option value="4">n/a</option>
-                    </select>
-                </div>
-                <div class="formElement">
-                    <button type="submit" class="btn">FINISH</button>
-                </div>
-            </div>
-        </form>
+        {% include "components/degree_details_form.html" %}
 
     </div>
 </div>

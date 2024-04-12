@@ -4,7 +4,8 @@ body {
 
 .navbarContainer {
     // border-radius: 15px;
-    background-color: #dd432be6;
+    grid-column: 1;
+    background-color: $usyd_orange;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -189,12 +190,13 @@ button > a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    margin: 10px;
     box-sizing: border-box;
 }
 
 .unitSearchContent {
     width: 100%;
+    box-sizing: border-box;
 }
 
 hr.solid {
@@ -203,4 +205,3 @@ hr.solid {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
