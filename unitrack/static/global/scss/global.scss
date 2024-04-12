@@ -24,13 +24,12 @@ button {
 }
 
 .pageContentsContainer {
-    padding: 10px;
+    padding: 15px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     height: 100%;
+    width: 100%;
     box-sizing: border-box;
 }
 
-@import "navbar", "signin", "register";
+@import "navbar", "signin", "register", "degreePlanner";

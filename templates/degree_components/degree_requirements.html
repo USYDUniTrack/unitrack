@@ -1,0 +1,38 @@
+<div class="degreeRequirements">
+    <div class="degreeProgress">
+        <p id="degreePercentage" onclick="updateProgressBar(12, 100)">0% planned</p>
+        <p id="completedCredits">0/0cp</p>
+        <br/>
+    </div>
+    <progress value="0" max="100"></progress>
+
+    <div class="creditRequirements">
+        <div class="degreeRequirement">
+            <p>Degree core</p>
+            <p>0/96</p>
+        </div>
+        <div class="degreeRequirement">
+            <p>Major 1</p>
+            <p>0/48</p>
+        </div>
+        <div class="degreeRequirement">
+            <p>Major 2</p>
+            <p>0/48</p>
+        </div>
+        <div class="degreeRequirement">
+            <p>Degree requirement</p>
+            <p>0/0</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateProgressBar(credits, totalCredits) {
+    var credits = credits;
+    var totalCredits = totalCredits;
+    document.getElementsByTagName("PROGRESS")[0].setAttribute("value", credits / totalCredits * 100);
+    document.getElementById("degreePercentage").innerHTML = credits / totalCredits * 100 + "% planned";
+    document.getElementById("completedCredits").innerHTML = credits + "/" + totalCredits + "cp";
+}
+</script>
+

@@ -3,7 +3,18 @@
 {% block main %}
     {% include 'components/navbar.html' %}
     <div class=pageContentsContainer>
-        Degree plan page
-
+        <div class="degreePlan">
+            <div class="heading">
+                <p>Bachelor of Advanced Computing</p>
+                <a href="#">
+                    <i class="material-icons">edit</i>
+                </a>
+            </div>
+            {% include 'degree_components/semester_plan.html' %}
+            {% include 'degree_components/semester_plan.html' %}
+            {% include 'degree_components/semester_plan.html' %}
+            {% include 'degree_components/semester_plan.html' %}
+        </div>
+        {% include 'degree_components/degree_requirements.html' %}
     </div>
 {% endblock %}
